@@ -8,10 +8,24 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="stylesheet" href="style.css">
-<title>Mi Dinero v3.6</title>
+<title>Mi Dinero v3.6.2</title>
 </head>
 <body>
-<div id="loginView" class="login"><div class="card login-card"><div class="brand-lockup login-lockup"><img src="brand-logo.png" alt="Finanzas Moreno Anguiano" class="brand-mark brand-mark-login"><div class="login-title-block"><div class="login-kicker">Finanzas Moreno Anguiano</div><h1 style="text-align:center">Mi Dinero</h1><p class="muted brand-copy" style="text-align:center">Ingresos, gastos, apartados, tarjetas, metas y reportes</p></div></div><form id="loginForm"><div class="field"><label>Usuario</label><input id="loginUser" autocomplete="username" required></div><div class="field"><label>Contraseña</label><input id="loginPass" type="password" autocomplete="current-password" required></div><button class="btn primary" style="width:100%" type="submit">Entrar</button></form></div></div>
+<div id="loginView" class="login login-screen">
+  <div class="login-panel">
+    <div class="login-brand">
+      <img src="brand-logo.png" alt="Finanzas Moreno Anguiano" class="login-brand-logo">
+      <div class="login-brand-name">Finanzas</div>
+      <div class="login-brand-subtitle">Moreno Anguiano</div>
+    </div>
+    <form id="loginForm" class="bank-login-form">
+      <div class="bank-field"><label>Usuario</label><input id="loginUser" autocomplete="username" required></div>
+      <div class="bank-field"><label>Contraseña</label><input id="loginPass" type="password" autocomplete="current-password" required></div>
+      <button class="bank-signin" type="submit">Entrar</button>
+    </form>
+    <div class="login-foot"><span>Mi Dinero</span><span>v3.6.2</span></div>
+  </div>
+</div>
 <div id="appView" class="shell hidden">
 <header class="topbar"><div class="brand"><img src="brand-logo.png" alt="Finanzas Moreno Anguiano" class="brand-mark"><div class="brand-text"><div>Mi Dinero</div><small>Finanzas Moreno Anguiano</small></div></div><div class="toolbar"><div class="userbox"><div id="whoName">—</div><div id="whoRole">—</div></div><button id="refreshDataBtn" class="btn ghost" type="button">↻ Actualizar</button><button id="logoutBtn" class="btn ghost" type="button">Salir</button></div></header>
 <main>
@@ -77,7 +91,7 @@
 <div class="card"><h2>Frecuencia de ingresos y ciclo financiero</h2><p id="cycleOwnerLabel" class="small muted">Configuración financiera</p><form id="cycleForm"><div class="field"><label>¿Cómo recibes tus ingresos?</label><select id="cycleType" required><option value="weekly">Semanal</option><option value="biweekly">Quincenal</option><option value="monthly">Mensual</option><option value="variable">Ingreso variable / sin fecha fija</option></select></div><div id="payDateField" class="field"><label>Fecha de un pago</label><input id="anchorPayDate" type="date"><div class="small muted" style="margin-top:5px">El siguiente ciclo se calcula automáticamente y termina un día antes del próximo pago.</div></div><div id="variableBudgetFields" class="hidden"><div class="info" style="margin-bottom:11px">Para negocio o trabajo por servicio puedes registrar ingresos todos los días. Elige cada cuánto reiniciar gastos y apartados.</div><div class="field"><label>Ciclo para gastos y apartados</label><select id="budgetCycleType"><option value="weekly">Semanal</option><option value="biweekly">Quincenal</option><option value="monthly">Mensual</option></select></div><div class="field"><label>Fecha de referencia del ciclo</label><input id="budgetAnchorDate" type="date"></div></div><div id="cyclePreview" class="info" style="margin-bottom:11px">—</div><label class="checkbox-row"><input id="businessMode" type="checkbox"> Activar modo negocio</label><button class="btn primary" style="margin-top:12px" type="submit">Guardar configuración</button></form></div>
 <div class="card"><h2>Personalizar inicio</h2><div class="grid two"><label class="checkbox-row"><input id="dashShowApartados" type="checkbox"> Mostrar apartados</label><label class="checkbox-row"><input id="dashShowMetas" type="checkbox"> Mostrar metas</label><label class="checkbox-row"><input id="dashShowFijos" type="checkbox"> Mostrar pagos fijos</label><label class="checkbox-row"><input id="dashShowMovs" type="checkbox"> Mostrar últimos movimientos</label></div><button id="saveDashboardPrefsBtn" class="btn primary" style="margin-top:12px" type="button">Guardar preferencias</button></div>
 <div class="card"><h2>Cambiar mi contraseña</h2><form id="passwordForm"><div class="field"><label>Nueva contraseña</label><input id="newPassword" type="password" minlength="8" required></div><button class="btn primary">Actualizar contraseña</button></form></div>
-<div class="card"><h2>Versión</h2><p class="small muted">Mi Dinero v3.6 · datos almacenados en Supabase.</p></div>
+<div class="card"><h2>Versión</h2><p class="small muted">Mi Dinero v3.6.2 · datos almacenados en Supabase.</p></div>
 </section>
 </main>
 <nav class="nav"><div class="nav-inner"><button class="active" data-view="dashboard"><span class="ico">⌂</span>Inicio</button><button data-view="movimientos"><span class="ico">↕</span>Movimientos</button><button data-view="apartados"><span class="ico">▦</span>Apartados</button><button data-view="cuentas"><span class="ico">▣</span>Cuentas</button><button data-view="fijos"><span class="ico">✓</span>Pagos fijos</button><button data-view="metas"><span class="ico">★</span>Metas</button><button data-view="compartir"><span class="ico">⇄</span>Compartir</button><button data-view="reporte"><span class="ico">▤</span>Reporte</button><button data-view="config"><span class="ico">⚙</span>Ajustes</button></div></nav>
