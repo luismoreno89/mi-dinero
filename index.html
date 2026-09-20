@@ -8,22 +8,24 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="icon" href="icon-192.png">
 <link rel="stylesheet" href="style.css">
-<title>Mi Dinero v3.6.2</title>
+<title>Mi Dinero v3.6.3</title>
 </head>
 <body>
 <div id="loginView" class="login login-screen">
   <div class="login-panel">
     <div class="login-brand">
-      <img src="brand-logo.png" alt="Finanzas Moreno Anguiano" class="login-brand-logo">
-      <div class="login-brand-name">Finanzas</div>
-      <div class="login-brand-subtitle">Moreno Anguiano</div>
+      <div class="login-brand-badge"><img src="brand-logo.png" alt="Finanzas Moreno Anguiano" class="login-brand-logo"></div>
+      <div class="login-brand-wordmark">Mi Dinero</div>
+      <div class="login-brand-subtitle">Finanzas Moreno Anguiano</div>
     </div>
     <form id="loginForm" class="bank-login-form">
-      <div class="bank-field"><label>Usuario</label><input id="loginUser" autocomplete="username" required></div>
-      <div class="bank-field"><label>Contraseña</label><input id="loginPass" type="password" autocomplete="current-password" required></div>
+      <div class="bank-field"><label>Usuario</label><input id="loginUser" autocomplete="username" placeholder="Ingresa tu usuario" required></div>
+      <div class="bank-field"><label>Contraseña</label><input id="loginPass" type="password" autocomplete="current-password" placeholder="Ingresa tu contraseña" required></div>
+      <div class="login-meta-row"><span>Acceso seguro</span><span>Supabase conectado</span></div>
       <button class="bank-signin" type="submit">Entrar</button>
     </form>
-    <div class="login-foot"><span>Mi Dinero</span><span>v3.6.2</span></div>
+    <div class="login-secondary-copy">Controla tus ingresos, gastos, apartados, tarjetas y metas en un solo lugar.</div>
+    <div class="login-foot"><span>Mi Dinero</span><span>v3.6.3</span></div>
   </div>
 </div>
 <div id="appView" class="shell hidden">
